@@ -1,0 +1,10 @@
+# @author    	Kai Grassnick <info@kai-grassnick.de>
+# @description 	fast update
+
+sudo -Hu USER git pull
+sudo rm -r var/cache/*
+sudo service memcached restart
+sudo service nginx restart
+sudo service php5-fpm restart
+sudo -Hu USER php bin/console cache:clear
+sudo -Hu USER compass compile

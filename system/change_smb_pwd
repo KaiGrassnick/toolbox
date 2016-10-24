@@ -1,0 +1,4 @@
+# @author    	Kai Grassnick <info@kai-grassnick.de>
+# @description 	change password on smb server
+
+smbpasswd -r <remote machine> <username>

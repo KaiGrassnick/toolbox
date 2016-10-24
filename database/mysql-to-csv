@@ -1,0 +1,4 @@
+# @author    	Kai Grassnick <info@kai-grassnick.de>
+# @description 	export table(s) to csv
+
+mysql -e "select c.title from company c where a = b" | sed 's/\t/","/g;s/^/"/;s/$/"/;s/\n//g' > ~/export.csv

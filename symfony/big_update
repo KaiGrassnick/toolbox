@@ -1,0 +1,11 @@
+# @author    	Kai Grassnick <info@kai-grassnick.de>
+# @description 	big update incl. js-dump
+
+sudo -Hu USER git pull
+sudo rm -r var/cache/*
+sudo service memcached restart
+sudo service nginx restart
+sudo service php5-fpm restart
+sudo -Hu USER php app/console cache:clear
+sudo -Hu USER php app/console assetic:dump
+sudo -Hu USER compass compile

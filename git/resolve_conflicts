@@ -1,0 +1,4 @@
+# @author    	Kai Grassnick <info@kai-grassnick.de>
+# @description 	resolve conflicts after merge
+
+git commit -am 'Conflicts resolved'
